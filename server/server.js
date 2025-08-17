@@ -11,7 +11,7 @@ app.use(express.json());
 // CORS Configuration
 // This is important for Vercel. It allows your frontend to talk to your backend.
 app.use(cors({
-  origin: process.env.FRONTEND_URL || https://gachwala-web.vercel.app/, // Allow your Vercel frontend URL
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173', // Allow your Vercel frontend URL
   credentials: true
 }));
 
@@ -28,4 +28,3 @@ app.use('/api/users', require('./routes/users'));
 
 // This is the crucial change for Vercel
 module.exports = app;
-
